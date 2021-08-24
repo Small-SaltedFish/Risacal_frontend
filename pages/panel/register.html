@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>Risacal DNS-注册账号</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../../assets/img/brand/favicon.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.css.network/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="../../assets/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="../../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="../../assets/vendor/sweetalert2/dist/sweetalert2.min.css">
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="../../assets/css/argon.css?v=1.1.0" type="text/css">
+</head>
+
+<body class="bg-default">
+  <!-- Navbar -->
+  <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="../../index.html">
+        <img src="../../assets/img/brand/white.png">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="../../pages/dashboards/dashboard.html">
+                <img src="../../assets/img/brand/blue.png">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a href="../../pages/dashboards/dashboard.html" class="nav-link">
+              <span class="nav-link-inner--text">控制台</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/domain.html" class="nav-link">
+              <span class="nav-link-inner--text">域名列表</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../../pages/examples/login.html" class="nav-link">
+              <span class="nav-link-inner--text">登录</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/register.html" class="nav-link">
+              <span class="nav-link-inner--text">注册</span>
+            </a>
+          </li>
+        </ul>
+        <hr class="d-lg-none" />
+        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+          <li class="nav-item d-none d-lg-block ml-lg-4">
+            <a href="../../pages/dashboards/dashboard.html" target="_blank" class="btn btn-neutral btn-icon">
+              <span class="nav-link-inner--text">控制台</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Main content -->
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+      <div class="container">
+        <div class="header-body text-center mb-7">
+          <div class="row justify-content-center">
+            <div class="col-xl-5 col-lg-6 col-md-8 px-5">
+              <h1 class="text-white">注册账号</h1>
+              <p class="text-lead text-white">免费注册一个账号来登录Risacal DNS.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container mt--8 pb-5">
+      <!-- Table -->
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+          <div class="card bg-secondary border-0">
+            <div class="card-body px-lg-5 py-lg-5">
+              <div class="text-center text-muted mb-4">
+                <small>填写资料来注册</small>
+              </div>
+              <form role="form">
+                <div class="form-group">
+                  <div class="input-group input-group-merge input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="账号" type="text" id="regid">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-merge input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="邮箱" type="email" id="regmail">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-merge input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fab fa-qq"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="QQ号" type="qq" id="regqq" oninput="value=value.replace(/[^\d]/g,'')">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-merge input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="密码" type="password" id="regpasswd">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-merge input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-user-friends"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="邀请码" type="invite" id="invent">
+                  </div>
+                </div>
+                <div class="text-muted font-italic"><small>密码强度 <span class="text-success font-weight-700">至少6位并包含字母和数字</span></small></div>
+                <div class="row my-4">
+                  <div class="col-12">
+                    <div class="custom-control custom-control-alternative custom-checkbox">
+                      <input class="custom-control-input" id="customCheckRegister" type="checkbox">
+                      <label class="custom-control-label" for="customCheckRegister">
+                        <span class="text-muted">我同意本站的 已声明条款 ，违者上交工信部。</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary mt-4" id="regbutton">立即注册</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="py-5" id="footer-main">
+    <div class="container">
+      <div class="row align-items-center justify-content-xl-between">
+        <div class="col-xl-6">
+          <div class="copyright text-center text-xl-left text-muted">
+            &copy; 2020 <a href="/" class="font-weight-bold ml-1" target="_blank">Risacal</a>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+            <li class="nav-item">
+              <a href="https://dh.ahy1.top" class="nav-link" target="_blank">Daihan</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://blog.boxpaper.club" class="nav-link" target="_blank">Rorical</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Argon</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="../../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="../../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <script src="../../assets/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+  <!-- Argon JS -->
+  <script src="../../assets/js/argon.js?v=1.1.0"></script>
+  <!-- 引入自己的JS -->
+  <script src="../../assets/js/md5.js"></script>
+  <script src="../../assets/js/demo.min.js"></script>
+  <script>
+	  
+	  $("#invent").val(getQueryVariable("invent"))
+function charMode(char){
+    switch (true) {
+        case (char>=48&&char<=57):
+            return 1;
+            break;
+        case (char>=65&&char<=90):
+            return 2;
+            break;
+            case (char>=97&&char<=122):
+            return 4;
+            break;
+
+        default:
+            return 8;
+            break;
+}}
+function checkPsw(password){
+    strengh=0;
+    for(var i=0;i<password.length;i++){ 
+            strengh|=charMode(password.charCodeAt(i));
+    }
+    var reference=0;
+    for(var i=0;i<4;i++){
+        if(strengh&1){
+            reference++;
+        }
+        strengh>>>=1;
+    }
+    return reference;
+}
+    $("#regbutton").click(function(){//注册按钮被点击
+        if($("#customCheckRegister").prop("checked")){
+            var pattern = new RegExp("[~'!@#$%^&*()-+_=:]")
+            var name = $("#regid")
+            var mail = $("#regmail")
+            var qq = $("#regqq")
+            var passwd = $("#regpasswd")
+            if(name.val()!=""&&mail.val()!=""&&qq.val()!=""&&passwd.val()!=""){
+				clear()
+                if(pattern.test(name.val())){
+                    swal({
+                        title: '温馨提示',
+                        text: '用户名不符合规范',
+                        type: 'warning',
+                        buttonsStyling: false,
+                        confirmButtonClass: 'btn btn-warning',
+                        timer: 1000
+                    });
+                    name.val(name.val().replace(pattern,""))
+                }else{
+                    var re=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+                    if (re.test(mail.val())) {
+                        if(checkPsw(passwd.val())>1){
+							inv = $("#invent").val()
+							data = {"username":name.val(),"password":hex_md5(passwd.val()),"email":mail.val(),"qq":qq.val()}
+							if(inv){
+								data["invent"] = inv
+							}
+                            $.ajax({
+                                type:'POST',
+                                url:'http://moe.boxpaper.club:8000/user/register',
+                                data:data,
+                                dataType:"json",
+                                success:function(data){
+                                    console.log(data)
+                                    if(data["status"]==0){
+                                        swal({
+                                            title: '注册成功',
+                                            text: '我们发送了一封邮件到您的邮箱，以此来验证您的邮箱是否正确',
+                                            type: 'success',
+                                            buttonsStyling: false,
+                                            confirmButtonClass: 'btn btn-success'
+                                        })
+                                    }else{
+                                        swal({
+                                            title: '警告',
+                                            text: data["err"],
+                                            type: 'info',
+                                            buttonsStyling: false,
+                                            confirmButtonClass: 'btn btn-info',
+                                            timer: 2000
+                                        })
+                                    }
+                                }
+                            })
+                        }else{
+                            swal({
+                                title: '温馨提示',
+                                text: '密码强度不符合要求',
+                                type: 'warning',
+                                buttonsStyling: false,
+                                confirmButtonClass: 'btn btn-warning',
+                                timer: 1000
+                            });
+                        }
+                        
+                    }else{
+                        swal({
+                            title: '温馨提示',
+                            text: '输入正确的邮箱',
+                            type: 'warning',
+                            buttonsStyling: false,
+                            confirmButtonClass: 'btn btn-warning',
+                            timer: 1000
+                        });
+                    }
+                }
+            }else{
+                swal({
+                    title: '温馨提示',
+                    text: '请填写所有空白',
+                    type: 'warning',
+                    buttonsStyling: false,
+                    confirmButtonClass: 'btn btn-warning',
+                    timer: 1000
+                });
+            }
+        }else{
+            swal({
+                title: '温馨提示',
+                text: '请同意声明条款',
+                type: 'warning',
+                buttonsStyling: false,
+                confirmButtonClass: 'btn btn-danger',
+                timer: 1000
+            });
+        }
+        
+
+    })
+  </script>
+</body>
+
+</html>
